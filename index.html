@@ -17,49 +17,47 @@
 body{
     background:#050505;
     font-family:Arial,sans-serif;
-    text-align:center;
+    color:white;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header{
-    padding:35px 15px 25px;
+    text-align:center;
+    padding:45px 15px 35px;
 }
 
 .welcome{
-    font-size:22px;
+    font-size:18px;
     font-weight:bold;
-    letter-spacing:2px;
-    animation:textColour 10s linear infinite;
+    letter-spacing:5px;
+    margin-bottom:12px;
+    animation:colourChange 10s linear infinite;
 }
 
-.title{
-    margin-top:8px;
-    font-size:34px;
+.channel-name{
+    font-size:42px;
     font-weight:900;
-    letter-spacing:2px;
-    animation:textColour 10s linear infinite;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    animation:colourChange 7s linear infinite;
 }
 
-/* COLOUR ANIMATION */
-
-.welcome,
-.title,
-.category button,
-.version,
-.download,
-.livery-name,
-.file-size,
-.latest h2,
-.warning-title,
-.warning-text,
-footer{
-    text-shadow:none;
-    box-shadow:none;
-    animation:textColour 10s linear infinite;
+.channel-sub{
+    margin-top:12px;
+    font-size:13px;
+    letter-spacing:3px;
+    color:#aaa;
 }
 
-@keyframes textColour{
+/* =========================
+   COLOUR ANIMATION
+========================= */
+
+@keyframes colourChange{
+
     0%{
         color:#ff0000;
     }
@@ -85,83 +83,167 @@ footer{
     }
 
     84%{
-        color:#8000ff;
+        color:#a000ff;
     }
 
     100%{
         color:#ff0000;
     }
+
 }
 
-/* CATEGORIES */
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .container{
-    width:95%;
+    width:94%;
     max-width:650px;
     margin:auto;
 }
 
+/* =========================
+   DOWNLOAD CATEGORY
+========================= */
+
+.main-heading{
+    text-align:center;
+    margin:15px 0 25px;
+}
+
+.main-heading h2{
+    font-size:24px;
+    letter-spacing:3px;
+    font-weight:900;
+    color:white;
+}
+
+.main-heading .line{
+    width:90px;
+    height:3px;
+    margin:10px auto 0;
+    border-radius:5px;
+    background:white;
+}
+
+/* =========================
+   CATEGORY TITLE
+========================= */
+
+.category-title{
+    margin:20px 0 15px;
+    padding:12px 15px;
+    border-left:4px solid white;
+    background:#111;
+    font-size:19px;
+    font-weight:900;
+    letter-spacing:2px;
+    animation:colourChange 10s linear infinite;
+}
+
+/* =========================
+   BUSSID CATEGORY
+========================= */
+
 .category{
-    margin:12px 0;
+    margin-bottom:13px;
 }
 
 .category button{
     width:100%;
-    padding:16px;
-    background:#111;
-    border:1px solid #333;
-    border-radius:10px;
-    font-size:18px;
-    font-weight:bold;
+    padding:18px 16px;
+    background:#101010;
+    border:1px solid #292929;
+    border-radius:12px;
+    color:white;
+    font-size:16px;
+    font-weight:800;
+    text-align:left;
     cursor:pointer;
+    position:relative;
+    transition:0.3s;
 }
 
-/* VERSION BOX */
+.category button::after{
+    content:"+";
+    position:absolute;
+    right:18px;
+    font-size:23px;
+    top:14px;
+}
+
+.category button:hover{
+    background:#181818;
+}
+
+.category button.active::after{
+    content:"−";
+}
+
+/* =========================
+   VERSION AREA
+========================= */
 
 .content{
     display:none;
     background:#0b0b0b;
-    padding:12px;
-    border-radius:0 0 10px 10px;
+    border:1px solid #222;
+    border-top:none;
+    border-radius:0 0 12px 12px;
+    padding:15px;
+}
+
+.version-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    padding:14px;
+    margin:5px 0;
+    background:#111;
+    border:1px solid #292929;
+    border-radius:9px;
 }
 
 .version{
-    padding:12px;
-    margin:8px 0;
-    border:1px solid #333;
-    border-radius:8px;
+    font-size:15px;
     font-weight:bold;
+    animation:colourChange 10s linear infinite;
 }
 
-/* DOWNLOAD BUTTON */
-
-.download,
-.livery-download{
+.download{
     display:inline-block;
-    margin-top:8px;
-    padding:10px 20px;
-    background:#111;
+    padding:9px 15px;
+    background:#050505;
     border:1px solid #444;
-    border-radius:8px;
+    border-radius:7px;
+    color:white;
     text-decoration:none;
-    font-weight:bold;
+    font-size:13px;
+    font-weight:900;
+    animation:colourChange 10s linear infinite;
 }
 
-/* LATEST LIVERY */
+/* =========================
+   LATEST LIVERY
+========================= */
 
 .latest{
-    width:95%;
+    width:94%;
     max-width:650px;
-    margin:40px auto 20px;
-    padding:18px;
+    margin:45px auto 20px;
+    padding:20px;
     background:#0b0b0b;
-    border:1px solid #333;
-    border-radius:12px;
+    border:1px solid #292929;
+    border-radius:14px;
 }
 
 .latest h2{
-    font-size:25px;
-    margin-bottom:18px;
+    text-align:center;
+    font-size:24px;
+    letter-spacing:3px;
+    margin-bottom:20px;
+    animation:colourChange 10s linear infinite;
 }
 
 .video{
@@ -175,54 +257,107 @@ footer{
 
 .video iframe{
     position:absolute;
-    top:0;
-    left:0;
     width:100%;
     height:100%;
+    left:0;
+    top:0;
     border:0;
 }
 
 .livery-name{
+    margin-top:18px;
     font-size:20px;
     font-weight:bold;
-    margin-top:18px;
+    text-align:center;
+    animation:colourChange 10s linear infinite;
 }
 
 .file-size{
     margin-top:8px;
-    font-size:16px;
+    text-align:center;
+    font-size:14px;
+    color:#aaa;
 }
 
 .livery-download{
-    margin-top:15px;
+    display:block;
+    width:150px;
+    margin:15px auto 0;
+    padding:11px;
+    text-align:center;
+    background:#111;
+    border:1px solid #444;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    animation:colourChange 10s linear infinite;
 }
 
-/* WARNING */
+/* =========================
+   WARNING
+========================= */
 
 .warning{
     margin-top:20px;
     padding:14px;
-    border:1px solid #333;
-    border-radius:10px;
+    background:#111;
+    border-radius:9px;
+    border:1px solid #292929;
+    text-align:center;
 }
 
 .warning-title{
-    font-size:18px;
-    font-weight:bold;
+    font-weight:900;
+    animation:colourChange 10s linear infinite;
 }
 
 .warning-text{
-    margin-top:8px;
-    font-size:14px;
-    line-height:1.5;
+    margin-top:7px;
+    font-size:13px;
+    animation:colourChange 10s linear infinite;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
-    margin-top:35px;
-    padding:20px 10px;
-    font-size:14px;
+    text-align:center;
+    padding:25px 10px;
+    font-size:13px;
+    color:#777;
+}
+
+/* NO GLOW */
+
+*{
+    text-shadow:none !important;
+    box-shadow:none !important;
+}
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+    .channel-name{
+        font-size:31px;
+        letter-spacing:2px;
+    }
+
+    .welcome{
+        font-size:15px;
+        letter-spacing:4px;
+    }
+
+    .category button{
+        font-size:14px;
+        padding:17px 14px;
+    }
+
+    .version-box{
+        padding:12px;
+    }
+
 }
 
 </style>
@@ -230,14 +365,22 @@ footer{
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
     <div class="welcome">
         WELCOME TO
     </div>
 
-    <div class="title">
+    <div class="channel-name">
         RS GAMING MOD
+    </div>
+
+    <div class="channel-sub">
+        BUSSID MODS • LIVERY • DOWNLOAD
     </div>
 
 </header>
@@ -245,236 +388,146 @@ footer{
 
 <div class="container">
 
-    <!-- WHEEL CAP -->
+    <!-- DOWNLOAD CATEGORY -->
 
-    <div class="category">
-        <button onclick="toggleCategory(this)">
-            BUSSID WHEEL CAP MOD
-        </button>
+    <div class="main-heading">
 
-        <div class="content">
+        <h2>DOWNLOAD CATEGORY</h2>
 
-            <div class="version">
-                V4.5.1
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
+        <div class="line"></div>
 
-            <div class="version">
-                V4.5.2
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
-
-        </div>
     </div>
 
 
-    <!-- REALISTIC RAIN -->
+    <!-- BUSSID CATEGORY -->
 
-    <div class="category">
-        <button onclick="toggleCategory(this)">
-            BUSSID REALISTIC RAIN MOD
-        </button>
-
-        <div class="content">
-
-            <div class="version">
-                V4.5.1
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
-
-            <div class="version">
-                V4.5.2
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
-
-        </div>
+    <div class="category-title">
+        BUSSID CATEGORY
     </div>
 
 
-    <!-- COLOUR LIGHT -->
+    <!-- 1 STEERING WHEEL -->
 
     <div class="category">
+
         <button onclick="toggleCategory(this)">
-            COLOUR LIGHT'S MOD
+            1. BUSSID STEERING WHEEL MOD
         </button>
 
         <div class="content">
 
-            <div class="version">
-                V4.5.1
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
+            <div class="version-box">
 
-            <div class="version">
-                V4.5.2
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
+                <span class="version">
+                    V4.5.2
+                </span>
 
-        </div>
-    </div>
-
-
-    <!-- NWKRTC -->
-
-    <div class="category">
-        <button onclick="toggleCategory(this)">
-            NWKRTC BUS LIVERY
-        </button>
-
-        <div class="content">
-
-            <div class="version">
-                V4.5.1
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
-
-            <div class="version">
-                V4.5.2
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- KSRTC -->
-
-    <div class="category">
-        <button onclick="toggleCategory(this)">
-            KSRTC BUS LIVERY
-        </button>
-
-        <div class="content">
-
-            <div class="version">
-                V4.5.1
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
-
-            <div class="version">
-                V4.5.2
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- KKRTC -->
-
-    <div class="category">
-        <button onclick="toggleCategory(this)">
-            KKRTC BUS LIVERY
-        </button>
-
-        <div class="content">
-
-            <div class="version">
-                V4.5.1
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
-
-            <div class="version">
-                V4.5.2
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- STEERING WHEEL -->
-
-    <div class="category">
-        <button onclick="toggleCategory(this)">
-            STEERING WHEEL MOD
-        </button>
-
-        <div class="content">
-
-            <div class="version">
-                V4.5.2
-                <br>
                 <a
                 href="https://sharemods.com/zx9nuo7n5iop/ASHOK_LEYLAND_STEERING_WHEEL_PACK.7z.html"
                 target="_blank"
                 class="download">
-                DOWNLOAD
+                    DOWNLOAD
                 </a>
+
             </div>
 
         </div>
+
     </div>
 
 
-    <!-- BUSSIN MAP -->
+    <!-- 2 REALISTIC RAIN -->
 
     <div class="category">
+
         <button onclick="toggleCategory(this)">
-            BUSSIN MAP MOD
+            2. BUSSID REALISTIC RAIN MOD
         </button>
 
         <div class="content">
 
-            <div class="version">
-                India Map Mod
-                <br>
-                v1.0.1
-                <br>
+            <div class="version-box">
+
+                <span class="version">
+                    V4.5.2
+                </span>
 
                 <a
-                href="https://sharemods.com/y4qvag536bqu/India_Map_Mod_Bussin_v1.0.7z.html"
-                target="_blank"
+                href="#"
                 class="download">
-                DOWNLOAD
+                    DOWNLOAD
                 </a>
 
             </div>
 
         </div>
+
     </div>
 
 
-    <!-- OTHER -->
+    <!-- 3 COLOUR LIGHT -->
 
     <div class="category">
+
         <button onclick="toggleCategory(this)">
-            OTHER
+            3. COLOUR LIGHT'S MOD
         </button>
 
         <div class="content">
 
-            <div class="version">
-                V4.5.1
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
-            </div>
+            <div class="version-box">
 
-            <div class="version">
-                V4.5.2
-                <br>
-                <a href="#" class="download">DOWNLOAD</a>
+                <span class="version">
+                    V4.5.2
+                </span>
+
+                <a
+                href="#"
+                class="download">
+                    DOWNLOAD
+                </a>
+
             </div>
 
         </div>
+
+    </div>
+
+
+    <!-- 4 WHEEL CAP -->
+
+    <div class="category">
+
+        <button onclick="toggleCategory(this)">
+            4. BUSSID WHEEL CAP MOD
+        </button>
+
+        <div class="content">
+
+            <div class="version-box">
+
+                <span class="version">
+                    V4.5.2
+                </span>
+
+                <a
+                href="#"
+                class="download">
+                    DOWNLOAD
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
 
 </div>
 
 
-<!-- LATEST LIVERY -->
+<!-- =========================
+     LATEST LIVERY
+========================= -->
 
 <section class="latest">
 
@@ -527,9 +580,11 @@ footer{
 
 function toggleCategory(button){
 
-    let currentContent = button.nextElementSibling;
+    const currentContent = button.nextElementSibling;
 
-    let allContents = document.querySelectorAll(".content");
+    const allContents = document.querySelectorAll(".content");
+
+    const allButtons = document.querySelectorAll(".category button");
 
     allContents.forEach(function(content){
 
@@ -539,11 +594,28 @@ function toggleCategory(button){
 
     });
 
+    allButtons.forEach(function(btn){
+
+        if(btn !== button){
+            btn.classList.remove("active");
+        }
+
+    });
+
+
     if(currentContent.style.display === "block"){
+
         currentContent.style.display = "none";
+
+        button.classList.remove("active");
+
     }
     else{
+
         currentContent.style.display = "block";
+
+        button.classList.add("active");
+
     }
 
 }
@@ -551,4 +623,4 @@ function toggleCategory(button){
 </script>
 
 </body>
-   </html>
+    </html>
