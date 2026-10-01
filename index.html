@@ -1,765 +1,606 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>RS GAMING MOD</title>
 
 <style>
-
-/* =========================
-   BASIC
-========================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     background:#050505;
-    font-family:Arial, Helvetica, sans-serif;
-    color:white;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
 }
-
 
 /* =========================
-   DIFFERENT COLOUR ANIMATIONS
+   NAVBAR
 ========================= */
 
-@keyframes redOrange{
-    0%{color:#ff2020;border-color:#ff2020;}
-    50%{color:#ff8c00;border-color:#ff8c00;}
-    100%{color:#ff2020;border-color:#ff2020;}
+.navbar{
+    width:100%;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #202020;
+    position:sticky;
+    top:0;
+    background:#050505;
+    z-index:100;
 }
 
-@keyframes cyanBlue{
-    0%{color:#00ffff;border-color:#00ffff;}
-    50%{color:#0080ff;border-color:#0080ff;}
-    100%{color:#00ffff;border-color:#00ffff;}
+.logo{
+    font-size:20px;
+    font-weight:900;
+    letter-spacing:1px;
+    animation:logoColor 7s linear infinite;
 }
 
-@keyframes yellowGreen{
-    0%{color:#ffff00;border-color:#ffff00;}
-    50%{color:#00ff66;border-color:#00ff66;}
-    100%{color:#ffff00;border-color:#ffff00;}
+.nav-links{
+    display:flex;
+    gap:24px;
 }
 
-@keyframes pinkPurple{
-    0%{color:#ff00aa;border-color:#ff00aa;}
-    50%{color:#9b00ff;border-color:#9b00ff;}
-    100%{color:#ff00aa;border-color:#ff00aa;}
-}
-
-@keyframes greenCyan{
-    0%{color:#00ff66;border-color:#00ff66;}
-    50%{color:#00ffff;border-color:#00ffff;}
-    100%{color:#00ff66;border-color:#00ff66;}
-}
-
-@keyframes orangeYellow{
-    0%{color:#ff6600;border-color:#ff6600;}
-    50%{color:#ffff00;border-color:#ffff00;}
-    100%{color:#ff6600;border-color:#ff6600;}
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    text-align:center;
-    padding:45px 12px 35px;
-}
-
-
-/* WELCOME */
-
-.welcome{
-    font-size:18px;
-    font-weight:800;
-    letter-spacing:6px;
-    margin-bottom:18px;
-
-    animation:cyanBlue 5s linear infinite;
-}
-
-
-/* =========================
-   BIG CHANNEL NAME
-========================= */
-
-.channel-name{
-    display:inline-block;
-
-    padding:12px 20px;
-
-    border:3px solid;
-
-    border-radius:10px;
-
-    background:#080808;
-
-    font-size:46px;
-
-    line-height:1;
-
-    font-weight:1000;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    animation:redOrange 4s linear infinite;
-}
-
-
-/* CHANNEL NAME SECOND ANIMATION */
-
-.channel-name::first-letter{
-    animation:yellowGreen 3s linear infinite;
-}
-
-
-/* SUBTITLE */
-
-.channel-sub{
-    margin-top:15px;
-
-    font-size:12px;
-
+.nav-links a{
+    color:#aaa;
+    text-decoration:none;
+    font-size:13px;
     font-weight:bold;
+    transition:.3s;
+}
 
-    letter-spacing:4px;
+.nav-links a:hover{
+    color:#fff;
+}
 
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:78vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.small-title{
+    font-size:14px;
+    letter-spacing:6px;
+    font-weight:bold;
+    color:#888;
+    margin-bottom:20px;
+    animation:cyanText 6s linear infinite;
+}
+
+.main-title{
+    display:inline-block;
+    padding:8px 16px;
+    border:2px solid #fff;
+    font-size:clamp(38px,8vw,78px);
+    font-weight:1000;
+    letter-spacing:2px;
+    line-height:1;
+    animation:titleColor 8s linear infinite;
+}
+
+.hero-subtitle{
+    margin-top:25px;
+    font-size:15px;
+    color:#999;
+    letter-spacing:2px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.hero-btn{
+    text-decoration:none;
+    padding:13px 25px;
+    border:1px solid #444;
+    color:#fff;
+    font-size:13px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section-heading{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-label{
+    font-size:11px;
+    letter-spacing:5px;
+    color:#777;
+    margin-bottom:10px;
+}
+
+.section-title{
+    font-size:34px;
+    font-weight:900;
+    animation:greenText 7s linear infinite;
+}
+
+/* =========================
+   MOD GRID
+========================= */
+
+.mod-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.mod-card{
+    background:#0b0b0b;
+    border:1px solid #242424;
+    padding:25px;
+    min-height:210px;
+    position:relative;
+    transition:.35s;
+}
+
+.mod-card:hover{
+    transform:translateY(-5px);
+    border-color:#555;
+}
+
+.card-number{
+    font-size:12px;
+    color:#666;
+    font-weight:bold;
+}
+
+.card-title{
+    margin-top:18px;
+    font-size:21px;
+    font-weight:900;
+    line-height:1.25;
+}
+
+.card-version{
+    margin-top:10px;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing:2px;
+    color:#888;
+}
+
+.download-btn{
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    padding:11px 20px;
+    font-size:12px;
+    font-weight:900;
+    border:1px solid #555;
+    color:#fff;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#fff;
+    color:#000;
+}
+
+/* Different card colours */
+
+.card-1 .card-title{
+    animation:redOrange 6s linear infinite;
+}
+
+.card-2 .card-title{
+    animation:blueCyan 6s linear infinite;
+}
+
+.card-3 .card-title{
+    animation:yellowGreen 6s linear infinite;
+}
+
+.card-4 .card-title{
     animation:pinkPurple 6s linear infinite;
 }
 
-
 /* =========================
-   MAIN
+   INFO SECTION
 ========================= */
 
-.container{
-    width:94%;
-    max-width:650px;
-    margin:auto;
-}
-
-
-/* =========================
-   DOWNLOAD CATEGORY
-========================= */
-
-.main-heading{
+.info-box{
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+    padding:35px 10px;
     text-align:center;
-    margin:15px 0 28px;
 }
 
-.main-heading h2{
-    font-size:26px;
-    font-weight:1000;
-    letter-spacing:4px;
-
-    animation:orangeYellow 5s linear infinite;
-}
-
-.main-heading .line{
-    width:100px;
-    height:3px;
-    margin:11px auto 0;
-
-    background:#ff6600;
-
-    animation:orangeYellow 5s linear infinite;
-}
-
-
-/* =========================
-   BUSSID CATEGORY
-========================= */
-
-.category-title{
-
-    margin:20px 0 16px;
-
-    padding:13px 16px;
-
-    background:#101010;
-
-    border-left:5px solid;
-
-    font-size:20px;
-
-    font-weight:1000;
-
-    letter-spacing:3px;
-
-    animation:greenCyan 5s linear infinite;
-}
-
-
-/* =========================
-   CATEGORY BUTTONS
-========================= */
-
-.category{
-    margin-bottom:14px;
-}
-
-
-/* 1 */
-
-.category:nth-child(2) button{
-
-    color:#ff3333;
-    border-color:#ff3333;
-
-    animation:redOrange 4s linear infinite;
-}
-
-
-/* 2 */
-
-.category:nth-child(3) button{
-
-    color:#00ffff;
-    border-color:#00ffff;
-
-    animation:cyanBlue 5s linear infinite;
-}
-
-
-/* 3 */
-
-.category:nth-child(4) button{
-
-    color:#ffff00;
-    border-color:#ffff00;
-
-    animation:yellowGreen 5s linear infinite;
-}
-
-
-/* 4 */
-
-.category:nth-child(5) button{
-
-    color:#ff00aa;
-    border-color:#ff00aa;
-
-    animation:pinkPurple 5s linear infinite;
-}
-
-
-.category button{
-
-    width:100%;
-
-    padding:18px 16px;
-
-    background:#0d0d0d;
-
-    border:1px solid;
-
-    border-radius:12px;
-
-    font-size:15px;
-
+.info-title{
+    font-size:24px;
     font-weight:900;
-
-    text-align:left;
-
-    cursor:pointer;
-
-    position:relative;
+    animation:pinkPurple 7s linear infinite;
 }
 
-
-.category button::after{
-
-    content:"+";
-
-    position:absolute;
-
-    right:18px;
-
-    top:11px;
-
-    font-size:26px;
-
-}
-
-
-.category button.active::after{
-    content:"−";
-}
-
-
-/* =========================
-   VERSION
-========================= */
-
-.content{
-
-    display:none;
-
-    background:#090909;
-
-    border:1px solid #222;
-
-    border-top:none;
-
-    border-radius:0 0 12px 12px;
-
-    padding:15px;
-}
-
-
-.version-box{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:14px;
-
-    background:#111;
-
-    border-radius:9px;
-}
-
-
-.version{
-
-    color:#00ffff;
-
-    font-size:16px;
-
-    font-weight:900;
-
-    animation:cyanBlue 5s linear infinite;
-}
-
-
-/* =========================
-   DOWNLOAD BUTTON
-========================= */
-
-.download{
-
-    padding:10px 17px;
-
-    background:#050505;
-
-    border:2px solid #ff6600;
-
-    border-radius:8px;
-
-    color:#ff6600;
-
-    text-decoration:none;
-
-    font-size:13px;
-
-    font-weight:900;
-
-    animation:orangeYellow 4s linear infinite;
-}
-
-
-/* =========================
-   COPYRIGHT
-========================= */
-
-.copyright{
-
-    width:94%;
-
-    max-width:650px;
-
-    margin:48px auto 20px;
-
-    padding:23px;
-
-    background:#0b0b0b;
-
-    border:1px solid #333;
-
-    border-radius:14px;
-}
-
-
-.copyright-title{
-
-    text-align:center;
-
-    font-size:25px;
-
-    font-weight:1000;
-
-    letter-spacing:4px;
-
-    margin-bottom:18px;
-
-    animation:redOrange 5s linear infinite;
-}
-
-
-.copyright-brand{
-
-    text-align:center;
-
-    font-size:28px;
-
-    font-weight:1000;
-
-    letter-spacing:4px;
-
-    margin-bottom:20px;
-
-    animation:cyanBlue 5s linear infinite;
-}
-
-
-.copyright-text{
-
-    color:#ccc;
-
-    font-size:14px;
-
+.info-text{
+    max-width:700px;
+    margin:15px auto 0;
+    color:#888;
     line-height:1.8;
-
-    text-align:left;
+    font-size:14px;
 }
-
-
-.copyright-text strong{
-
-    animation:yellowGreen 5s linear infinite;
-}
-
 
 /* =========================
    FOOTER
 ========================= */
 
 footer{
-
+    border-top:1px solid #202020;
     text-align:center;
-
-    padding:25px 10px;
-
-    font-size:13px;
-
-    color:#777;
+    padding:35px 20px;
+    margin-top:30px;
 }
 
+.footer-brand{
+    font-size:18px;
+    font-weight:900;
+    animation:blueCyan 7s linear infinite;
+}
+
+.footer-copy{
+    margin-top:10px;
+    color:#666;
+    font-size:12px;
+}
 
 /* =========================
-   NO GLOW
+   ANIMATIONS
+   No glow
+   No blinking
 ========================= */
 
-*{
-    text-shadow:none !important;
-    box-shadow:none !important;
+@keyframes logoColor{
+    0%{color:#fff;}
+    25%{color:#00d9ff;}
+    50%{color:#7dff72;}
+    75%{color:#ff5c8a;}
+    100%{color:#fff;}
 }
 
+@keyframes cyanText{
+    0%{color:#00d9ff;}
+    50%{color:#6b7cff;}
+    100%{color:#00d9ff;}
+}
+
+@keyframes titleColor{
+    0%{color:#ff3b30;border-color:#ff3b30;}
+    25%{color:#ff9f0a;border-color:#ff9f0a;}
+    50%{color:#ff2d55;border-color:#ff2d55;}
+    75%{color:#af52de;border-color:#af52de;}
+    100%{color:#ff3b30;border-color:#ff3b30;}
+}
+
+@keyframes greenText{
+    0%{color:#34c759;}
+    50%{color:#00d9ff;}
+    100%{color:#34c759;}
+}
+
+@keyframes redOrange{
+    0%{color:#ff3b30;}
+    50%{color:#ff9f0a;}
+    100%{color:#ff3b30;}
+}
+
+@keyframes blueCyan{
+    0%{color:#007aff;}
+    50%{color:#00d9ff;}
+    100%{color:#007aff;}
+}
+
+@keyframes yellowGreen{
+    0%{color:#ffd60a;}
+    50%{color:#34c759;}
+    100%{color:#ffd60a;}
+}
+
+@keyframes pinkPurple{
+    0%{color:#ff2d55;}
+    50%{color:#af52de;}
+    100%{color:#ff2d55;}
+}
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:480px){
+@media(max-width:700px){
 
-    .channel-name{
-
-        font-size:31px;
-
-        letter-spacing:2px;
-
-        padding:11px 14px;
+    .navbar{
+        padding:16px 18px;
     }
 
-    .welcome{
+    .logo{
+        font-size:16px;
+    }
 
-        font-size:14px;
+    .nav-links{
+        gap:12px;
+    }
 
+    .nav-links a{
+        font-size:10px;
+    }
+
+    .hero{
+        min-height:70vh;
+        padding:50px 15px;
+    }
+
+    .small-title{
+        font-size:11px;
         letter-spacing:4px;
     }
 
-    .channel-sub{
-
-        font-size:10px;
-
-        letter-spacing:2px;
+    .main-title{
+        font-size:32px;
+        padding:7px 10px;
+        letter-spacing:1px;
     }
 
-    .main-heading h2{
+    .hero-subtitle{
+        font-size:12px;
+        line-height:1.7;
+    }
 
+    .section{
+        padding:60px 15px;
+    }
+
+    .section-title{
+        font-size:27px;
+    }
+
+    .mod-grid{
+        grid-template-columns:1fr;
+    }
+
+    .mod-card{
+        min-height:195px;
+        padding:22px;
+    }
+
+    .card-title{
+        font-size:19px;
+    }
+
+    .info-title{
         font-size:21px;
-
-        letter-spacing:2px;
     }
-
-    .category-title{
-
-        font-size:18px;
-    }
-
-    .category button{
-
-        font-size:14px;
-    }
-
 }
-
-
-/* =========================
-   JAVASCRIPT
-========================= */
-
 </style>
-
 </head>
-
 
 <body>
 
+<!-- NAVIGATION -->
 
-<!-- HEADER -->
+<nav class="navbar">
 
-<header>
-
-    <div class="welcome">
-        WELCOME TO
-    </div>
-
-
-    <div class="channel-name">
+    <div class="logo">
         RS GAMING MOD
     </div>
 
-
-    <div class="channel-sub">
-        BUSSID MODS • LIVERY • DOWNLOAD
+    <div class="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#mods">MODS</a>
+        <a href="#copyright">COPYRIGHT</a>
     </div>
 
-</header>
+</nav>
 
 
+<!-- HERO -->
 
-<!-- DOWNLOAD -->
+<section class="hero" id="home">
 
-<div class="container">
+    <div class="hero-content">
 
+        <div class="small-title">
+            WELCOME TO
+        </div>
 
-    <div class="main-heading">
+        <div class="main-title">
+            RS GAMING MOD
+        </div>
 
-        <h2>
-            DOWNLOAD CATEGORY
-        </h2>
+        <p class="hero-subtitle">
+            BUSSID MODS • LIVERIES • DOWNLOADS
+        </p>
 
-        <div class="line"></div>
+        <div class="hero-buttons">
+            <a href="#mods" class="hero-btn">
+                EXPLORE MODS
+            </a>
+
+            <a href="#copyright" class="hero-btn">
+                COPYRIGHT
+            </a>
+        </div>
 
     </div>
 
+</section>
 
 
-    <!-- BUSSID -->
+<!-- MOD SECTION -->
 
-    <div class="category-title">
-        BUSSID CATEGORY
-    </div>
+<section class="section" id="mods">
 
+    <div class="section-heading">
 
+        <div class="section-label">
+            DOWNLOAD CENTER
+        </div>
 
-    <!-- 1 -->
-
-    <div class="category">
-
-        <button onclick="toggleCategory(this)">
-            1. BUSSID STEERING WHEEL MOD
-        </button>
-
-
-        <div class="content">
-
-            <div class="version-box">
-
-                <span class="version">
-                    V4.5.2
-                </span>
-
-                <a href="#" class="download">
-                    DOWNLOAD
-                </a>
-
-            </div>
-
+        <div class="section-title">
+            BUSSID MODS
         </div>
 
     </div>
 
 
+    <div class="mod-grid">
 
-    <!-- 2 -->
+        <!-- CARD 1 -->
 
-    <div class="category">
+        <div class="mod-card card-1">
 
-        <button onclick="toggleCategory(this)">
-            2. BUSSID REALISTIC RAIN MOD
-        </button>
-
-
-        <div class="content">
-
-            <div class="version-box">
-
-                <span class="version">
-                    V4.5.2
-                </span>
-
-                <a href="#" class="download">
-                    DOWNLOAD
-                </a>
-
+            <div class="card-number">
+                MOD 01
             </div>
+
+            <div class="card-title">
+                BUSSID STEERING<br>
+                WHEEL MOD
+            </div>
+
+            <div class="card-version">
+                VERSION 4.5.2
+            </div>
+
+            <a href="#" class="download-btn">
+                DOWNLOAD
+            </a>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="mod-card card-2">
+
+            <div class="card-number">
+                MOD 02
+            </div>
+
+            <div class="card-title">
+                BUSSID REALISTIC<br>
+                RAIN MOD
+            </div>
+
+            <div class="card-version">
+                VERSION 4.5.2
+            </div>
+
+            <a href="#" class="download-btn">
+                DOWNLOAD
+            </a>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="mod-card card-3">
+
+            <div class="card-number">
+                MOD 03
+            </div>
+
+            <div class="card-title">
+                COLOUR LIGHT'S<br>
+                MOD
+            </div>
+
+            <div class="card-version">
+                VERSION 4.5.2
+            </div>
+
+            <a href="#" class="download-btn">
+                DOWNLOAD
+            </a>
+
+        </div>
+
+
+        <!-- CARD 4 -->
+
+        <div class="mod-card card-4">
+
+            <div class="card-number">
+                MOD 04
+            </div>
+
+            <div class="card-title">
+                BUSSID WHEEL CAP<br>
+                MOD
+            </div>
+
+            <div class="card-version">
+                VERSION 4.5.2
+            </div>
+
+            <a href="#" class="download-btn">
+                DOWNLOAD
+            </a>
 
         </div>
 
     </div>
 
+</section>
 
 
-    <!-- 3 -->
+<!-- INFO -->
 
-    <div class="category">
+<section class="section">
 
-        <button onclick="toggleCategory(this)">
-            3. COLOUR LIGHT'S MOD
-        </button>
+    <div class="info-box">
 
-
-        <div class="content">
-
-            <div class="version-box">
-
-                <span class="version">
-                    V4.5.2
-                </span>
-
-                <a href="#" class="download">
-                    DOWNLOAD
-                </a>
-
-            </div>
-
+        <div class="info-title">
+            RS GAMING MOD
         </div>
 
-    </div>
-
-
-
-    <!-- 4 -->
-
-    <div class="category">
-
-        <button onclick="toggleCategory(this)">
-            4. BUSSID WHEEL CAP MOD
-        </button>
-
-
-        <div class="content">
-
-            <div class="version-box">
-
-                <span class="version">
-                    V4.5.2
-                </span>
-
-                <a href="#" class="download">
-                    DOWNLOAD
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-</div>
-
-
-
-<!-- COPYRIGHT -->
-
-<section class="copyright">
-
-
-    <div class="copyright-title">
-        COPYRIGHT POLICY
-    </div>
-
-
-    <div class="copyright-brand">
-        RS GAMING MOD
-    </div>
-
-
-    <div class="copyright-text">
-
-        <p>
-            All content available on
-            <strong>RS GAMING MOD</strong>
-            is provided for gaming and entertainment purposes.
-        </p>
-
-
-        <br>
-
-
-        <p>
-            Please do not copy, re-upload, modify,
-            redistribute or claim our original mods,
-            liveries, files, images or website content
-            as your own without permission.
-        </p>
-
-
-        <br>
-
-
-        <p>
-            If you share our content, please give proper
-            credit to <strong>RS GAMING MOD</strong>.
-        </p>
-
-
-        <br>
-
-
-        <p>
-            Some third-party content may belong to their
-            respective owners. All trademarks and copyrights
-            remain with their respective owners.
-        </p>
-
-
-        <br>
-
-
-        <p>
-            If you believe any content on this website
-            infringes your rights, please contact
-            <strong>RS GAMING MOD</strong> for review.
+        <p class="info-text">
+            Welcome to RS GAMING MOD.
+            Find BUSSID mods, liveries and other
+            gaming-related downloads in one place.
         </p>
 
     </div>
@@ -767,71 +608,61 @@ footer{
 </section>
 
 
+<!-- COPYRIGHT -->
+
+<section class="section" id="copyright">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            WEBSITE POLICY
+        </div>
+
+        <div class="section-title">
+            COPYRIGHT
+        </div>
+
+    </div>
+
+    <div class="info-box">
+
+        <div class="info-title">
+            COPYRIGHT POLICY
+        </div>
+
+        <p class="info-text">
+            All content available on RS GAMING MOD
+            is provided for gaming and entertainment purposes.
+            Please do not copy, re-upload, modify,
+            redistribute or claim our original mods,
+            liveries, files, images or website content
+            as your own without permission.
+            If you share our content, please give proper
+            credit to RS GAMING MOD.
+            Some third-party content may belong to their
+            respective owners.
+            All trademarks and copyrights remain with
+            their respective owners.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
 
-    © 2026 RS GAMING MOD
+    <div class="footer-brand">
+        RS GAMING MOD
+    </div>
+
+    <div class="footer-copy">
+        © 2026 RS GAMING MOD
+    </div>
 
 </footer>
 
-
-
-<script>
-
-function toggleCategory(button){
-
-    const currentContent =
-        button.nextElementSibling;
-
-    const allContents =
-        document.querySelectorAll(".content");
-
-    const allButtons =
-        document.querySelectorAll(".category button");
-
-
-    allContents.forEach(function(content){
-
-        if(content !== currentContent){
-
-            content.style.display = "none";
-
-        }
-
-    });
-
-
-    allButtons.forEach(function(btn){
-
-        if(btn !== button){
-
-            btn.classList.remove("active");
-
-        }
-
-    });
-
-
-    if(currentContent.style.display === "block"){
-
-        currentContent.style.display = "none";
-
-        button.classList.remove("active");
-
-    }
-
-    else{
-
-        currentContent.style.display = "block";
-
-        button.classList.add("active");
-
-    }
-
-}
-
-</script>
-
-
 </body>
-       </html>
+   </html>
