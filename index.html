@@ -7,6 +7,7 @@
 <title>RS GAMING MOD</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -23,6 +24,7 @@ body{
     font-family:Arial,Helvetica,sans-serif;
 }
 
+
 /* =========================
    NAVBAR
 ========================= */
@@ -33,7 +35,7 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    border-bottom:1px solid #202020;
+    border-bottom:1px solid #222;
     position:sticky;
     top:0;
     background:#050505;
@@ -41,95 +43,82 @@ body{
 }
 
 .logo{
-    font-size:20px;
+    font-size:19px;
     font-weight:900;
-    letter-spacing:1px;
     animation:logoColor 7s linear infinite;
 }
 
 .nav-links{
     display:flex;
-    gap:24px;
+    gap:22px;
 }
 
 .nav-links a{
     color:#aaa;
     text-decoration:none;
-    font-size:13px;
+    font-size:12px;
     font-weight:bold;
-    transition:.3s;
 }
 
 .nav-links a:hover{
     color:#fff;
 }
 
+
 /* =========================
    HERO
 ========================= */
 
 .hero{
-    min-height:78vh;
+    min-height:75vh;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:70px 20px;
-}
-
-.hero-content{
-    max-width:850px;
+    padding:60px 20px;
 }
 
 .small-title{
-    font-size:14px;
+    font-size:13px;
     letter-spacing:6px;
-    font-weight:bold;
-    color:#888;
+    color:#00d9ff;
+    animation:cyan 6s linear infinite;
     margin-bottom:20px;
-    animation:cyanText 6s linear infinite;
 }
 
 .main-title{
     display:inline-block;
-    padding:8px 16px;
-    border:2px solid #fff;
-    font-size:clamp(38px,8vw,78px);
+    border:2px solid #ff3b30;
+    padding:9px 16px;
+    font-size:clamp(38px,8vw,76px);
     font-weight:1000;
     letter-spacing:2px;
-    line-height:1;
-    animation:titleColor 8s linear infinite;
+    animation:title 8s linear infinite;
 }
 
 .hero-subtitle{
-    margin-top:25px;
-    font-size:15px;
-    color:#999;
+    margin-top:24px;
+    color:#888;
+    font-size:14px;
     letter-spacing:2px;
 }
 
-.hero-buttons{
-    margin-top:35px;
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
 .hero-btn{
-    text-decoration:none;
-    padding:13px 25px;
+    display:inline-block;
+    margin-top:30px;
+    padding:13px 24px;
     border:1px solid #444;
     color:#fff;
-    font-size:13px;
+    text-decoration:none;
+    font-size:12px;
     font-weight:bold;
-    transition:.3s;
 }
 
 .hero-btn:hover{
     background:#fff;
     color:#000;
 }
+
 
 /* =========================
    SECTION
@@ -138,29 +127,30 @@ body{
 .section{
     max-width:1100px;
     margin:auto;
-    padding:80px 20px;
+    padding:75px 20px;
 }
 
 .section-heading{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:40px;
 }
 
 .section-label{
+    color:#777;
     font-size:11px;
     letter-spacing:5px;
-    color:#777;
     margin-bottom:10px;
 }
 
 .section-title{
     font-size:34px;
     font-weight:900;
-    animation:greenText 7s linear infinite;
+    animation:green 7s linear infinite;
 }
 
+
 /* =========================
-   MOD GRID
+   MOD CARDS
 ========================= */
 
 .mod-grid{
@@ -173,9 +163,8 @@ body{
     background:#0b0b0b;
     border:1px solid #242424;
     padding:25px;
-    min-height:210px;
-    position:relative;
-    transition:.35s;
+    min-height:215px;
+    transition:.3s;
 }
 
 .mod-card:hover{
@@ -184,36 +173,34 @@ body{
 }
 
 .card-number{
-    font-size:12px;
     color:#666;
+    font-size:11px;
     font-weight:bold;
 }
 
 .card-title{
     margin-top:18px;
-    font-size:21px;
+    font-size:20px;
     font-weight:900;
-    line-height:1.25;
+    line-height:1.3;
 }
 
 .card-version{
     margin-top:10px;
-    font-size:12px;
-    font-weight:bold;
+    color:#777;
+    font-size:11px;
     letter-spacing:2px;
-    color:#888;
 }
 
 .download-btn{
     display:inline-block;
-    margin-top:25px;
-    text-decoration:none;
+    margin-top:24px;
     padding:11px 20px;
-    font-size:12px;
-    font-weight:900;
     border:1px solid #555;
     color:#fff;
-    transition:.3s;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:900;
 }
 
 .download-btn:hover{
@@ -221,64 +208,66 @@ body{
     color:#000;
 }
 
-/* Different card colours */
+
+/* Different colours */
 
 .card-1 .card-title{
-    animation:redOrange 6s linear infinite;
+    animation:red 6s linear infinite;
 }
 
 .card-2 .card-title{
-    animation:blueCyan 6s linear infinite;
+    animation:blue 6s linear infinite;
 }
 
 .card-3 .card-title{
-    animation:yellowGreen 6s linear infinite;
+    animation:yellow 6s linear infinite;
 }
 
 .card-4 .card-title{
-    animation:pinkPurple 6s linear infinite;
+    animation:pink 6s linear infinite;
 }
 
+
 /* =========================
-   INFO SECTION
+   COPYRIGHT
 ========================= */
 
 .info-box{
     border-top:1px solid #222;
     border-bottom:1px solid #222;
-    padding:35px 10px;
+    padding:35px 15px;
     text-align:center;
 }
 
 .info-title{
-    font-size:24px;
+    font-size:23px;
     font-weight:900;
-    animation:pinkPurple 7s linear infinite;
+    animation:pink 7s linear infinite;
 }
 
 .info-text{
-    max-width:700px;
+    max-width:720px;
     margin:15px auto 0;
     color:#888;
-    line-height:1.8;
     font-size:14px;
+    line-height:1.8;
 }
+
 
 /* =========================
    FOOTER
 ========================= */
 
 footer{
-    border-top:1px solid #202020;
+    border-top:1px solid #222;
     text-align:center;
     padding:35px 20px;
-    margin-top:30px;
 }
 
 .footer-brand{
     font-size:18px;
     font-weight:900;
-    animation:blueCyan 7s linear infinite;
+    animation:blue 7s linear infinite;
 }
 
 .footer-copy{
@@ -287,63 +276,82 @@ footer{
     font-size:12px;
 }
 
+
 /* =========================
-   ANIMATIONS
-   No glow
-   No blinking
+   COLOUR ANIMATIONS
 ========================= */
 
 @keyframes logoColor{
-    0%{color:#fff;}
-    25%{color:#00d9ff;}
-    50%{color:#7dff72;}
-    75%{color:#ff5c8a;}
-    100%{color:#fff;}
+    0%{color:#fff}
+    25%{color:#00d9ff}
+    50%{color:#7dff72}
+    75%{color:#ff5c8a}
+    100%{color:#fff}
 }
 
-@keyframes cyanText{
-    0%{color:#00d9ff;}
-    50%{color:#6b7cff;}
-    100%{color:#00d9ff;}
+@keyframes cyan{
+    0%{color:#00d9ff}
+    50%{color:#6b7cff}
+    100%{color:#00d9ff}
 }
 
-@keyframes titleColor{
-    0%{color:#ff3b30;border-color:#ff3b30;}
-    25%{color:#ff9f0a;border-color:#ff9f0a;}
-    50%{color:#ff2d55;border-color:#ff2d55;}
-    75%{color:#af52de;border-color:#af52de;}
-    100%{color:#ff3b30;border-color:#ff3b30;}
+@keyframes title{
+    0%{
+        color:#ff3b30;
+        border-color:#ff3b30;
+    }
+
+    25%{
+        color:#ff9f0a;
+        border-color:#ff9f0a;
+    }
+
+    50%{
+        color:#ff2d55;
+        border-color:#ff2d55;
+    }
+
+    75%{
+        color:#af52de;
+        border-color:#af52de;
+    }
+
+    100%{
+        color:#ff3b30;
+        border-color:#ff3b30;
+    }
 }
 
-@keyframes greenText{
-    0%{color:#34c759;}
-    50%{color:#00d9ff;}
-    100%{color:#34c759;}
+@keyframes green{
+    0%{color:#34c759}
+    50%{color:#00d9ff}
+    100%{color:#34c759}
 }
 
-@keyframes redOrange{
-    0%{color:#ff3b30;}
-    50%{color:#ff9f0a;}
-    100%{color:#ff3b30;}
+@keyframes red{
+    0%{color:#ff3b30}
+    50%{color:#ff9f0a}
+    100%{color:#ff3b30}
 }
 
-@keyframes blueCyan{
-    0%{color:#007aff;}
-    50%{color:#00d9ff;}
-    100%{color:#007aff;}
+@keyframes blue{
+    0%{color:#007aff}
+    50%{color:#00d9ff}
+    100%{color:#007aff}
 }
 
-@keyframes yellowGreen{
-    0%{color:#ffd60a;}
-    50%{color:#34c759;}
-    100%{color:#ffd60a;}
+@keyframes yellow{
+    0%{color:#ffd60a}
+    50%{color:#34c759}
+    100%{color:#ffd60a}
 }
 
-@keyframes pinkPurple{
-    0%{color:#ff2d55;}
-    50%{color:#af52de;}
-    100%{color:#ff2d55;}
+@keyframes pink{
+    0%{color:#ff2d55}
+    50%{color:#af52de}
+    100%{color:#ff2d55}
 }
+
 
 /* =========================
    MOBILE
@@ -356,7 +364,7 @@ footer{
     }
 
     .logo{
-        font-size:16px;
+        font-size:15px;
     }
 
     .nav-links{
@@ -364,7 +372,7 @@ footer{
     }
 
     .nav-links a{
-        font-size:10px;
+        font-size:9px;
     }
 
     .hero{
@@ -373,18 +381,17 @@ footer{
     }
 
     .small-title{
-        font-size:11px;
+        font-size:10px;
         letter-spacing:4px;
     }
 
     .main-title{
         font-size:32px;
         padding:7px 10px;
-        letter-spacing:1px;
     }
 
     .hero-subtitle{
-        font-size:12px;
+        font-size:11px;
         line-height:1.7;
     }
 
@@ -393,7 +400,7 @@ footer{
     }
 
     .section-title{
-        font-size:27px;
+        font-size:28px;
     }
 
     .mod-grid{
@@ -401,24 +408,21 @@ footer{
     }
 
     .mod-card{
-        min-height:195px;
-        padding:22px;
+        min-height:200px;
     }
 
-    .card-title{
-        font-size:19px;
-    }
-
-    .info-title{
-        font-size:21px;
-    }
 }
+
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav class="navbar">
 
@@ -427,19 +431,31 @@ footer{
     </div>
 
     <div class="nav-links">
-        <a href="#home">HOME</a>
-        <a href="#mods">MODS</a>
-        <a href="#copyright">COPYRIGHT</a>
+
+        <a href="#home">
+            HOME
+        </a>
+
+        <a href="#mods">
+            MODS
+        </a>
+
+        <a href="#copyright">
+            COPYRIGHT
+        </a>
+
     </div>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HOME
+========================= -->
 
 <section class="hero" id="home">
 
-    <div class="hero-content">
+    <div>
 
         <div class="small-title">
             WELCOME TO
@@ -453,22 +469,18 @@ footer{
             BUSSID MODS • LIVERIES • DOWNLOADS
         </p>
 
-        <div class="hero-buttons">
-            <a href="#mods" class="hero-btn">
-                EXPLORE MODS
-            </a>
-
-            <a href="#copyright" class="hero-btn">
-                COPYRIGHT
-            </a>
-        </div>
+        <a href="#mods" class="hero-btn">
+            EXPLORE MODS
+        </a>
 
     </div>
 
 </section>
 
 
-<!-- MOD SECTION -->
+<!-- =========================
+     MODS
+========================= -->
 
 <section class="section" id="mods">
 
@@ -487,7 +499,8 @@ footer{
 
     <div class="mod-grid">
 
-        <!-- CARD 1 -->
+
+        <!-- MOD 01 -->
 
         <div class="mod-card card-1">
 
@@ -511,7 +524,7 @@ footer{
         </div>
 
 
-        <!-- CARD 2 -->
+        <!-- MOD 02 -->
 
         <div class="mod-card card-2">
 
@@ -535,7 +548,7 @@ footer{
         </div>
 
 
-        <!-- CARD 3 -->
+        <!-- MOD 03 -->
 
         <div class="mod-card card-3">
 
@@ -559,7 +572,7 @@ footer{
         </div>
 
 
-        <!-- CARD 4 -->
+        <!-- MOD 04 -->
 
         <div class="mod-card card-4">
 
@@ -582,33 +595,15 @@ footer{
 
         </div>
 
-    </div>
-
-</section>
-
-
-<!-- INFO -->
-
-<section class="section">
-
-    <div class="info-box">
-
-        <div class="info-title">
-            RS GAMING MOD
-        </div>
-
-        <p class="info-text">
-            Welcome to RS GAMING MOD.
-            Find BUSSID mods, liveries and other
-            gaming-related downloads in one place.
-        </p>
 
     </div>
 
 </section>
 
 
-<!-- COPYRIGHT -->
+<!-- =========================
+     COPYRIGHT
+========================= -->
 
 <section class="section" id="copyright">
 
@@ -624,6 +619,7 @@ footer{
 
     </div>
 
+
     <div class="info-box">
 
         <div class="info-title">
@@ -631,18 +627,24 @@ footer{
         </div>
 
         <p class="info-text">
+
             All content available on RS GAMING MOD
             is provided for gaming and entertainment purposes.
+
             Please do not copy, re-upload, modify,
             redistribute or claim our original mods,
             liveries, files, images or website content
             as your own without permission.
+
             If you share our content, please give proper
             credit to RS GAMING MOD.
+
             Some third-party content may belong to their
             respective owners.
+
             All trademarks and copyrights remain with
             their respective owners.
+
         </p>
 
     </div>
@@ -650,7 +652,9 @@ footer{
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -664,5 +668,6 @@ footer{
 
 </footer>
 
+
 </body>
-   </html>
+                </html>
