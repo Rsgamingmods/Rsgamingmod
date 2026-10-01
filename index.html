@@ -58,42 +58,19 @@ header{
 
 @keyframes colourChange{
 
-    0%{
-        color:#ff0000;
-    }
-
-    14%{
-        color:#ff8000;
-    }
-
-    28%{
-        color:#ffff00;
-    }
-
-    42%{
-        color:#00ff00;
-    }
-
-    56%{
-        color:#00ffff;
-    }
-
-    70%{
-        color:#0080ff;
-    }
-
-    84%{
-        color:#a000ff;
-    }
-
-    100%{
-        color:#ff0000;
-    }
+    0%{color:#ff0000;}
+    14%{color:#ff8000;}
+    28%{color:#ffff00;}
+    42%{color:#00ff00;}
+    56%{color:#00ffff;}
+    70%{color:#0080ff;}
+    84%{color:#a000ff;}
+    100%{color:#ff0000;}
 
 }
 
 /* =========================
-   MAIN CONTAINER
+   CONTAINER
 ========================= */
 
 .container{
@@ -115,7 +92,6 @@ header{
     font-size:24px;
     letter-spacing:3px;
     font-weight:900;
-    color:white;
 }
 
 .main-heading .line{
@@ -142,7 +118,7 @@ header{
 }
 
 /* =========================
-   BUSSID CATEGORY
+   CATEGORY
 ========================= */
 
 .category{
@@ -161,19 +137,14 @@ header{
     text-align:left;
     cursor:pointer;
     position:relative;
-    transition:0.3s;
 }
 
 .category button::after{
     content:"+";
     position:absolute;
     right:18px;
-    font-size:23px;
-    top:14px;
-}
-
-.category button:hover{
-    background:#181818;
+    top:12px;
+    font-size:25px;
 }
 
 .category button.active::after{
@@ -181,7 +152,7 @@ header{
 }
 
 /* =========================
-   VERSION AREA
+   VERSION
 ========================= */
 
 .content{
@@ -211,6 +182,10 @@ header{
     animation:colourChange 10s linear infinite;
 }
 
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
+
 .download{
     display:inline-block;
     padding:9px 15px;
@@ -225,95 +200,45 @@ header{
 }
 
 /* =========================
-   LATEST LIVERY
+   COPYRIGHT POLICY
 ========================= */
 
-.latest{
+.copyright{
     width:94%;
     max-width:650px;
     margin:45px auto 20px;
-    padding:20px;
+    padding:22px;
     background:#0b0b0b;
     border:1px solid #292929;
     border-radius:14px;
 }
 
-.latest h2{
+.copyright-title{
     text-align:center;
     font-size:24px;
-    letter-spacing:3px;
-    margin-bottom:20px;
-    animation:colourChange 10s linear infinite;
-}
-
-.video{
-    position:relative;
-    width:100%;
-    padding-bottom:56.25%;
-    height:0;
-    overflow:hidden;
-    border-radius:10px;
-}
-
-.video iframe{
-    position:absolute;
-    width:100%;
-    height:100%;
-    left:0;
-    top:0;
-    border:0;
-}
-
-.livery-name{
-    margin-top:18px;
-    font-size:20px;
-    font-weight:bold;
-    text-align:center;
-    animation:colourChange 10s linear infinite;
-}
-
-.file-size{
-    margin-top:8px;
-    text-align:center;
-    font-size:14px;
-    color:#aaa;
-}
-
-.livery-download{
-    display:block;
-    width:150px;
-    margin:15px auto 0;
-    padding:11px;
-    text-align:center;
-    background:#111;
-    border:1px solid #444;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-    animation:colourChange 10s linear infinite;
-}
-
-/* =========================
-   WARNING
-========================= */
-
-.warning{
-    margin-top:20px;
-    padding:14px;
-    background:#111;
-    border-radius:9px;
-    border:1px solid #292929;
-    text-align:center;
-}
-
-.warning-title{
     font-weight:900;
+    letter-spacing:3px;
+    margin-bottom:18px;
     animation:colourChange 10s linear infinite;
 }
 
-.warning-text{
-    margin-top:7px;
-    font-size:13px;
+.copyright-brand{
+    text-align:center;
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:3px;
+    margin-bottom:18px;
+    animation:colourChange 7s linear infinite;
+}
+
+.copyright-text{
+    text-align:left;
+    color:#ddd;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.copyright-text strong{
     animation:colourChange 10s linear infinite;
 }
 
@@ -358,12 +283,17 @@ footer{
         padding:12px;
     }
 
+    .copyright-title{
+        font-size:20px;
+    }
+
 }
 
 </style>
 </head>
 
 <body>
+
 
 <!-- =========================
      HEADER
@@ -386,9 +316,11 @@ footer{
 </header>
 
 
-<div class="container">
+<!-- =========================
+     DOWNLOAD CATEGORY
+========================= -->
 
-    <!-- DOWNLOAD CATEGORY -->
+<div class="container">
 
     <div class="main-heading">
 
@@ -406,7 +338,7 @@ footer{
     </div>
 
 
-    <!-- 1 STEERING WHEEL -->
+    <!-- 1 -->
 
     <div class="category">
 
@@ -422,10 +354,7 @@ footer{
                     V4.5.2
                 </span>
 
-                <a
-                href="https://sharemods.com/zx9nuo7n5iop/ASHOK_LEYLAND_STEERING_WHEEL_PACK.7z.html"
-                target="_blank"
-                class="download">
+                <a href="#" class="download">
                     DOWNLOAD
                 </a>
 
@@ -436,7 +365,7 @@ footer{
     </div>
 
 
-    <!-- 2 REALISTIC RAIN -->
+    <!-- 2 -->
 
     <div class="category">
 
@@ -452,9 +381,7 @@ footer{
                     V4.5.2
                 </span>
 
-                <a
-                href="#"
-                class="download">
+                <a href="#" class="download">
                     DOWNLOAD
                 </a>
 
@@ -465,7 +392,7 @@ footer{
     </div>
 
 
-    <!-- 3 COLOUR LIGHT -->
+    <!-- 3 -->
 
     <div class="category">
 
@@ -481,9 +408,7 @@ footer{
                     V4.5.2
                 </span>
 
-                <a
-                href="#"
-                class="download">
+                <a href="#" class="download">
                     DOWNLOAD
                 </a>
 
@@ -494,7 +419,7 @@ footer{
     </div>
 
 
-    <!-- 4 WHEEL CAP -->
+    <!-- 4 -->
 
     <div class="category">
 
@@ -510,9 +435,7 @@ footer{
                     V4.5.2
                 </span>
 
-                <a
-                href="#"
-                class="download">
+                <a href="#" class="download">
                     DOWNLOAD
                 </a>
 
@@ -526,53 +449,71 @@ footer{
 
 
 <!-- =========================
-     LATEST LIVERY
+     COPYRIGHT POLICY
 ========================= -->
 
-<section class="latest">
+<section class="copyright">
 
-    <h2>
-        LATEST LIVERY
-    </h2>
-
-    <div class="video">
-
-        <iframe
-        src="https://www.youtube.com/embed/z5MGVZ8G-hw"
-        allowfullscreen>
-        </iframe>
-
+    <div class="copyright-title">
+        COPYRIGHT POLICY
     </div>
 
-    <div class="livery-name">
-        Latest Livery
+    <div class="copyright-brand">
+        RS GAMING MOD
     </div>
 
-    <div class="file-size">
-        File Size: —
-    </div>
+    <div class="copyright-text">
 
-    <a href="#" class="livery-download">
-        DOWNLOAD
-    </a>
+        <p>
+            All content available on <strong>RS GAMING MOD</strong>
+            is provided for gaming and entertainment purposes.
+        </p>
 
-    <div class="warning">
+        <br>
 
-        <div class="warning-title">
-            ⚠️ WARNING
-        </div>
+        <p>
+            Please do not copy, re-upload, modify, redistribute or
+            claim our original mods, liveries, files, images or other
+            website content as your own without permission.
+        </p>
 
-        <div class="warning-text">
-            This Mod Use Only V4.5.2 BUSSID
-        </div>
+        <br>
+
+        <p>
+            If you want to share our content, please give proper credit
+            to <strong>RS GAMING MOD</strong> and use the original source
+            whenever possible.
+        </p>
+
+        <br>
+
+        <p>
+            Some third-party content may belong to its respective
+            owners. All trademarks and copyrights remain with their
+            respective owners.
+        </p>
+
+        <br>
+
+        <p>
+            If you believe any content on this website infringes your
+            rights, please contact <strong>RS GAMING MOD</strong> for
+            review and appropriate action.
+        </p>
 
     </div>
 
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
+
     © 2026 RS GAMING MOD
+
 </footer>
 
 
@@ -582,22 +523,30 @@ function toggleCategory(button){
 
     const currentContent = button.nextElementSibling;
 
-    const allContents = document.querySelectorAll(".content");
+    const allContents =
+        document.querySelectorAll(".content");
 
-    const allButtons = document.querySelectorAll(".category button");
+    const allButtons =
+        document.querySelectorAll(".category button");
+
 
     allContents.forEach(function(content){
 
         if(content !== currentContent){
+
             content.style.display = "none";
+
         }
 
     });
 
+
     allButtons.forEach(function(btn){
 
         if(btn !== button){
+
             btn.classList.remove("active");
+
         }
 
     });
@@ -610,6 +559,7 @@ function toggleCategory(button){
         button.classList.remove("active");
 
     }
+
     else{
 
         currentContent.style.display = "block";
