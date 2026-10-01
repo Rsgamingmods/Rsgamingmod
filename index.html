@@ -21,55 +21,23 @@
 
 body{
     background:#050505;
+    font-family:Arial,sans-serif;
     color:white;
-    font-family:Arial, sans-serif;
 }
 
 /* =========================
-   COLOUR ANIMATION
+   RS GAMING MOD COLOUR
 ========================= */
 
-@keyframes colourChange{
+@keyframes rsColour{
 
-    0%{
-        color:#ff0000;
-        border-color:#ff0000;
-    }
-
-    14%{
-        color:#ff8000;
-        border-color:#ff8000;
-    }
-
-    28%{
-        color:#ffff00;
-        border-color:#ffff00;
-    }
-
-    42%{
-        color:#00ff00;
-        border-color:#00ff00;
-    }
-
-    56%{
-        color:#00ffff;
-        border-color:#00ffff;
-    }
-
-    70%{
-        color:#0080ff;
-        border-color:#0080ff;
-    }
-
-    84%{
-        color:#a000ff;
-        border-color:#a000ff;
-    }
-
-    100%{
-        color:#ff0000;
-        border-color:#ff0000;
-    }
+    0%{color:#ff0000;border-color:#ff0000;}
+    16%{color:#ff8000;border-color:#ff8000;}
+    32%{color:#ffff00;border-color:#ffff00;}
+    48%{color:#00ff00;border-color:#00ff00;}
+    64%{color:#00ffff;border-color:#00ffff;}
+    80%{color:#0080ff;border-color:#0080ff;}
+    100%{color:#ff00ff;border-color:#ff00ff;}
 
 }
 
@@ -79,111 +47,46 @@ body{
 
 header{
     text-align:center;
-    padding:42px 15px 35px;
+    padding:40px 15px 30px;
 }
 
-/* WELCOME */
-
 .welcome{
+    color:#00ffff;
     font-size:17px;
     font-weight:bold;
     letter-spacing:5px;
-    margin-bottom:18px;
-
-    animation:colourChange 10s linear infinite;
+    margin-bottom:15px;
 }
 
-/* =========================
-   CHANNEL NAME BOX
-========================= */
+/* SMALL BOX ONLY AROUND CHANNEL NAME */
 
-.channel-box{
+.channel-name{
+    display:inline-block;
 
-    position:relative;
+    padding:10px 18px;
 
-    width:95%;
-    max-width:600px;
-
-    margin:auto;
-
-    padding:25px 18px;
-
-    border:3px solid;
-
-    border-radius:18px;
-
-    background:#0b0b0b;
-
-    animation:colourChange 8s linear infinite;
-}
-
-/* RECTANGLE ICON */
-
-.channel-icon{
-
-    width:58px;
-    height:40px;
-
-    margin:0 auto 15px;
-
-    border:3px solid;
+    border:2px solid;
 
     border-radius:8px;
 
-    position:relative;
+    background:#090909;
 
-    animation:colourChange 8s linear infinite;
-}
-
-/* ICON PLAY */
-
-.channel-icon::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:21px;
-    top:9px;
-
-    width:0;
-    height:0;
-
-    border-top:9px solid transparent;
-    border-bottom:9px solid transparent;
-    border-left:14px solid;
-
-    animation:colourChange 8s linear infinite;
-}
-
-/* CHANNEL NAME */
-
-.channel-name{
-
-    font-size:42px;
+    font-size:34px;
 
     font-weight:900;
 
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    line-height:1.1;
-
-    animation:colourChange 8s linear infinite;
-}
-
-/* SUB TEXT */
-
-.channel-sub{
-
-    margin-top:12px;
-
-    font-size:12px;
-
     letter-spacing:3px;
 
-    color:#999;
+    animation:rsColour 8s linear infinite;
+
+    text-transform:uppercase;
+}
+
+.channel-sub{
+    margin-top:12px;
+    color:#777;
+    font-size:12px;
+    letter-spacing:2px;
 }
 
 /* =========================
@@ -191,13 +94,9 @@ header{
 ========================= */
 
 .container{
-
     width:94%;
-
     max-width:650px;
-
     margin:auto;
-
 }
 
 /* =========================
@@ -205,33 +104,22 @@ header{
 ========================= */
 
 .main-heading{
-
     text-align:center;
-
-    margin:15px 0 25px;
+    margin:20px 0 25px;
 }
 
 .main-heading h2{
-
+    color:#ff8000;
     font-size:24px;
-
     letter-spacing:3px;
-
     font-weight:900;
-
-    animation:colourChange 10s linear infinite;
 }
 
 .main-heading .line{
-
-    width:90px;
-
+    width:85px;
     height:3px;
-
     margin:10px auto 0;
-
-    background:white;
-
+    background:#ff8000;
     border-radius:5px;
 }
 
@@ -240,30 +128,28 @@ header{
 ========================= */
 
 .category-title{
-
     margin:20px 0 15px;
 
-    padding:13px 15px;
+    padding:12px 15px;
 
-    background:#111;
+    background:#101010;
 
-    border-left:4px solid;
+    border-left:4px solid #00ff66;
+
+    color:#00ff66;
 
     font-size:19px;
 
     font-weight:900;
 
     letter-spacing:2px;
-
-    animation:colourChange 10s linear infinite;
 }
 
 /* =========================
-   CATEGORY
+   CATEGORY BUTTONS
 ========================= */
 
 .category{
-
     margin-bottom:13px;
 }
 
@@ -271,15 +157,13 @@ header{
 
     width:100%;
 
-    padding:18px 16px;
+    padding:17px 16px;
 
     background:#101010;
 
-    border:1px solid #292929;
+    border:1px solid #333;
 
-    border-radius:12px;
-
-    color:white;
+    border-radius:11px;
 
     font-size:15px;
 
@@ -291,27 +175,44 @@ header{
 
     position:relative;
 
-    animation:colourChange 10s linear infinite;
+}
+
+/* DIFFERENT CATEGORY COLOURS */
+
+.category:nth-of-type(1) button{
+    color:#ff3333;
+    border-left:4px solid #ff3333;
+}
+
+.category:nth-of-type(2) button{
+    color:#00ffff;
+    border-left:4px solid #00ffff;
+}
+
+.category:nth-of-type(3) button{
+    color:#ffff00;
+    border-left:4px solid #ffff00;
+}
+
+.category:nth-of-type(4) button{
+    color:#00ff66;
+    border-left:4px solid #00ff66;
 }
 
 .category button::after{
-
     content:"+";
 
     position:absolute;
 
     right:18px;
 
-    top:12px;
+    top:11px;
 
     font-size:25px;
-
 }
 
 .category button.active::after{
-
     content:"−";
-
 }
 
 /* =========================
@@ -328,9 +229,9 @@ header{
 
     border-top:none;
 
-    border-radius:0 0 12px 12px;
+    border-radius:0 0 11px 11px;
 
-    padding:15px;
+    padding:14px;
 }
 
 .version-box{
@@ -343,27 +244,22 @@ header{
 
     gap:10px;
 
-    padding:14px;
+    padding:13px;
 
     background:#111;
 
     border:1px solid #292929;
 
-    border-radius:9px;
+    border-radius:8px;
 }
 
 .version{
-
+    color:#ff00ff;
     font-size:15px;
-
     font-weight:bold;
-
-    animation:colourChange 10s linear infinite;
 }
 
-/* =========================
-   DOWNLOAD
-========================= */
+/* DOWNLOAD */
 
 .download{
 
@@ -373,23 +269,21 @@ header{
 
     background:#050505;
 
-    border:1px solid;
+    border:1px solid #ff8000;
 
     border-radius:7px;
 
-    color:white;
+    color:#ff8000;
 
     text-decoration:none;
 
     font-size:13px;
 
     font-weight:900;
-
-    animation:colourChange 10s linear infinite;
 }
 
 /* =========================
-   COPYRIGHT
+   COPYRIGHT POLICY
 ========================= */
 
 .copyright{
@@ -404,14 +298,16 @@ header{
 
     background:#0b0b0b;
 
-    border:1px solid #292929;
+    border:1px solid #333;
 
-    border-radius:14px;
+    border-radius:13px;
 }
 
 .copyright-title{
 
     text-align:center;
+
+    color:#ff3333;
 
     font-size:23px;
 
@@ -420,28 +316,26 @@ header{
     letter-spacing:3px;
 
     margin-bottom:18px;
-
-    animation:colourChange 10s linear infinite;
 }
 
 .copyright-brand{
 
     text-align:center;
 
-    font-size:25px;
+    color:#00ffff;
+
+    font-size:23px;
 
     font-weight:900;
 
     letter-spacing:3px;
 
     margin-bottom:18px;
-
-    animation:colourChange 8s linear infinite;
 }
 
 .copyright-text{
 
-    color:#ddd;
+    color:#ccc;
 
     font-size:14px;
 
@@ -451,8 +345,7 @@ header{
 }
 
 .copyright-text strong{
-
-    animation:colourChange 10s linear infinite;
+    color:#ffff00;
 }
 
 /* =========================
@@ -465,9 +358,9 @@ footer{
 
     padding:25px 10px;
 
-    font-size:13px;
-
     color:#777;
+
+    font-size:13px;
 }
 
 /* =========================
@@ -475,11 +368,8 @@ footer{
 ========================= */
 
 *{
-
     text-shadow:none !important;
-
     box-shadow:none !important;
-
 }
 
 /* =========================
@@ -489,33 +379,21 @@ footer{
 @media(max-width:480px){
 
     .channel-name{
-
-        font-size:30px;
-
+        font-size:27px;
         letter-spacing:2px;
+        padding:9px 14px;
     }
 
     .welcome{
-
         font-size:14px;
-
         letter-spacing:4px;
     }
 
-    .channel-box{
-
-        padding:22px 10px;
-    }
-
     .category button{
-
         font-size:14px;
-
-        padding:17px 14px;
     }
 
     .copyright-title{
-
         font-size:20px;
     }
 
@@ -539,25 +417,12 @@ footer{
         WELCOME TO
     </div>
 
+    <div class="channel-name">
+        RS GAMING MOD
+    </div>
 
-    <div class="channel-box">
-
-        <!-- RECTANGLE ICON -->
-
-        <div class="channel-icon"></div>
-
-
-        <!-- CHANNEL NAME -->
-
-        <div class="channel-name">
-            RS GAMING MOD
-        </div>
-
-
-        <div class="channel-sub">
-            BUSSID MODS • LIVERY • DOWNLOAD
-        </div>
-
+    <div class="channel-sub">
+        BUSSID MODS • LIVERY • DOWNLOAD
     </div>
 
 </header>
@@ -591,7 +456,7 @@ footer{
 
 
 
-    <!-- 1 STEERING -->
+    <!-- 1 -->
 
     <div class="category">
 
@@ -601,7 +466,6 @@ footer{
 
         </button>
 
-
         <div class="content">
 
             <div class="version-box">
@@ -610,13 +474,8 @@ footer{
                     V4.5.2
                 </span>
 
-
-                <a
-                    href="#"
-                    class="download">
-
+                <a href="#" class="download">
                     DOWNLOAD
-
                 </a>
 
             </div>
@@ -627,7 +486,7 @@ footer{
 
 
 
-    <!-- 2 RAIN -->
+    <!-- 2 -->
 
     <div class="category">
 
@@ -637,7 +496,6 @@ footer{
 
         </button>
 
-
         <div class="content">
 
             <div class="version-box">
@@ -646,13 +504,8 @@ footer{
                     V4.5.2
                 </span>
 
-
-                <a
-                    href="#"
-                    class="download">
-
+                <a href="#" class="download">
                     DOWNLOAD
-
                 </a>
 
             </div>
@@ -663,7 +516,7 @@ footer{
 
 
 
-    <!-- 3 COLOUR LIGHT -->
+    <!-- 3 -->
 
     <div class="category">
 
@@ -673,7 +526,6 @@ footer{
 
         </button>
 
-
         <div class="content">
 
             <div class="version-box">
@@ -682,13 +534,8 @@ footer{
                     V4.5.2
                 </span>
 
-
-                <a
-                    href="#"
-                    class="download">
-
+                <a href="#" class="download">
                     DOWNLOAD
-
                 </a>
 
             </div>
@@ -699,7 +546,7 @@ footer{
 
 
 
-    <!-- 4 WHEEL CAP -->
+    <!-- 4 -->
 
     <div class="category">
 
@@ -709,7 +556,6 @@ footer{
 
         </button>
 
-
         <div class="content">
 
             <div class="version-box">
@@ -718,13 +564,8 @@ footer{
                     V4.5.2
                 </span>
 
-
-                <a
-                    href="#"
-                    class="download">
-
+                <a href="#" class="download">
                     DOWNLOAD
-
                 </a>
 
             </div>
@@ -732,6 +573,7 @@ footer{
         </div>
 
     </div>
+
 
 </div>
 
@@ -743,82 +585,53 @@ footer{
 
 <section class="copyright">
 
-
     <div class="copyright-title">
-
         COPYRIGHT POLICY
-
     </div>
-
 
     <div class="copyright-brand">
-
         RS GAMING MOD
-
     </div>
-
 
     <div class="copyright-text">
 
-
         <p>
-
             All content available on
             <strong>RS GAMING MOD</strong>
             is provided for gaming and entertainment purposes.
-
         </p>
-
 
         <br>
 
-
         <p>
-
             Please do not copy, re-upload, modify,
             redistribute or claim our original mods,
             liveries, files, images or website content
             as your own without permission.
-
         </p>
-
 
         <br>
 
-
         <p>
-
-            If you share our content,
-            please give proper credit to
-            <strong>RS GAMING MOD</strong>.
-
+            If you share our content, please give proper
+            credit to <strong>RS GAMING MOD</strong>.
         </p>
-
 
         <br>
 
-
         <p>
-
-            Some third-party content may belong to
-            their respective owners. All trademarks
-            and copyrights remain with their respective owners.
-
+            Some third-party content may belong to their
+            respective owners. All trademarks and copyrights
+            remain with their respective owners.
         </p>
-
 
         <br>
 
-
         <p>
-
             If you believe any content on this website
             infringes your rights, please contact
-            <strong>RS GAMING MOD</strong>
-            for review.
-
+            <strong>RS GAMING MOD</strong> for review.
         </p>
-
 
     </div>
 
@@ -826,14 +639,8 @@ footer{
 
 
 
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
-
     © 2026 RS GAMING MOD
-
 </footer>
 
 
@@ -896,4 +703,4 @@ function toggleCategory(button){
 
 
 </body>
-        </html>
+   </html>
